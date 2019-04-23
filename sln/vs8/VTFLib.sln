@@ -1,0 +1,59 @@
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VTFLib", "VTFLib\VTFLib.vcproj", "{A10BFF3F-9C4B-4999-B56C-B9280BB4FDA9}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VTFEdit", "VTFEdit\VTFEdit.vcproj", "{C0718102-155C-439F-843E-526CAF26B117}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A10BFF3F-9C4B-4999-B56C-B9280BB4FDA9} = {A10BFF3F-9C4B-4999-B56C-B9280BB4FDA9}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VTFCmd", "VTFCmd\VTFCmd.vcproj", "{5B47F431-462D-4EBD-A622-713968F75E48}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A10BFF3F-9C4B-4999-B56C-B9280BB4FDA9} = {A10BFF3F-9C4B-4999-B56C-B9280BB4FDA9}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E2DDAD3C-46B9-445F-81C9-30296B7492D1}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\GPL.txt = ..\..\GPL.txt
+		..\..\LGPL.txt = ..\..\LGPL.txt
+		..\..\Readme.txt = ..\..\Readme.txt
+		..\..\lib\VTFLib.h = ..\..\lib\VTFLib.h
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A10BFF3F-9C4B-4999-B56C-B9280BB4FDA9}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A10BFF3F-9C4B-4999-B56C-B9280BB4FDA9}.Debug|Win32.Build.0 = Debug|Win32
+		{A10BFF3F-9C4B-4999-B56C-B9280BB4FDA9}.Debug|x64.ActiveCfg = Debug|x64
+		{A10BFF3F-9C4B-4999-B56C-B9280BB4FDA9}.Debug|x64.Build.0 = Debug|x64
+		{A10BFF3F-9C4B-4999-B56C-B9280BB4FDA9}.Release|Win32.ActiveCfg = Release|Win32
+		{A10BFF3F-9C4B-4999-B56C-B9280BB4FDA9}.Release|Win32.Build.0 = Release|Win32
+		{A10BFF3F-9C4B-4999-B56C-B9280BB4FDA9}.Release|x64.ActiveCfg = Release|x64
+		{A10BFF3F-9C4B-4999-B56C-B9280BB4FDA9}.Release|x64.Build.0 = Release|x64
+		{C0718102-155C-439F-843E-526CAF26B117}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C0718102-155C-439F-843E-526CAF26B117}.Debug|Win32.Build.0 = Debug|Win32
+		{C0718102-155C-439F-843E-526CAF26B117}.Debug|x64.ActiveCfg = Debug|x64
+		{C0718102-155C-439F-843E-526CAF26B117}.Debug|x64.Build.0 = Debug|x64
+		{C0718102-155C-439F-843E-526CAF26B117}.Release|Win32.ActiveCfg = Release|Win32
+		{C0718102-155C-439F-843E-526CAF26B117}.Release|Win32.Build.0 = Release|Win32
+		{C0718102-155C-439F-843E-526CAF26B117}.Release|x64.ActiveCfg = Release|x64
+		{C0718102-155C-439F-843E-526CAF26B117}.Release|x64.Build.0 = Release|x64
+		{5B47F431-462D-4EBD-A622-713968F75E48}.Debug|Win32.ActiveCfg = Debug|Win32
+		{5B47F431-462D-4EBD-A622-713968F75E48}.Debug|Win32.Build.0 = Debug|Win32
+		{5B47F431-462D-4EBD-A622-713968F75E48}.Debug|x64.ActiveCfg = Debug|x64
+		{5B47F431-462D-4EBD-A622-713968F75E48}.Debug|x64.Build.0 = Debug|x64
+		{5B47F431-462D-4EBD-A622-713968F75E48}.Release|Win32.ActiveCfg = Release|Win32
+		{5B47F431-462D-4EBD-A622-713968F75E48}.Release|Win32.Build.0 = Release|Win32
+		{5B47F431-462D-4EBD-A622-713968F75E48}.Release|x64.ActiveCfg = Release|x64
+		{5B47F431-462D-4EBD-A622-713968F75E48}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

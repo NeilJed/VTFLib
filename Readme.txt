@@ -1,35 +1,71 @@
-# VTFLib: Valve VTF and VMT image format programming library.
+===========================================
+===========================================
+ VTFLib BY: NEIL JEDRZEJEWSKI & RYAN GREGG
+===========================================
+===========================================
 
-VTFLib is a LGPL open source programming library that provides a C and C++ API that, with a few simple functions, can open and save .vtf and .vmt files, providing access to all known features. The library functions independent of Steam, allowing third party applications to use the library without Steam present or runningi on the target system.
+===========================
+Library/Author Information:
+===========================
 
-VTFLib includes two GPL example applications, VTFCmd and VTFEdit. VTFCmd is a C command line frontend for VTFLib that can create .vtf and .vmt files from various source formats. It is similar in functionality to Valve's vtex Source SDK utility, but offers a lot more control. VTFEdit is a C++ .NET graphical frontend for VTFLib with viewing and creation capabilities. Both VTFCmd and VTFEdit support several source image formats, including, but not limited to .bmp, .dds, .gif, .jpg, .png and .tga.
+Title:
+VTFLib
 
-## Library/Author Information
+Date:
+July 25th, 2011
 
-* **Title**: VTFLib
-* **Written In**: C/C++
-* **Date**: July 25th, 2011
-* **Authors**: [https://github.com/NeilJed](Neil Jedrzejewski) & [http://nemesis.thewavelength.net/](Ryan Gregg)
+Authors:
+Neil Jedrzejewski & Ryan Gregg
 
-## Project Structure
+Build:
+1.3.2
+
+Email:
+jed@wunderboy.org (Neil Jedrzejewski)
+ryansgregg@hotmail.com (Ryan Gregg)
+
+Website:
+http://www.wunderboy.org/ (Neil Jedrzejewski)
+http://nemesis.thewavelength.net/ (Ryan Gregg)
+
+Written In:
+C/C++
+
+==========
+Structure:
+==========
 
 The library contains five folders:
 
-* **Bin** - Contains library and example program binaries.
-* **Lib** - Contains library C and C++ Header and Inline Files.
-* **Sln** - Contains Visual Studio solutions.
-* **VTFCmd** - Contains C example program source code.
-* **VTFEdit** - Contains C++ .NET example program source code.
-* **VTFLib** - Contains C++ library source code.
+  Bin
+  - Contains library and example program binaries.
 
-The project files are for Visual Studio .NET 2003 and 2005; no .NET extensions are used except in VTFEdit. Visual Studio 6.0 project files have also been
-included, but nvDXTLib does not come with the correct .lib files to link with. nvDXTLib is required for VTF creation and can be downloaded from:
+  Lib
+  - Contains library C and C++ Header and Inline Files.
+  
+  Sln
+  - Contains Visual Studio solutions.
+
+  VTFCmd
+  - Contains C example program source code.
+
+  VTFEdit
+  - Contains C++ .NET example program source code.
+
+  VTFLib
+  - Contains C++ library source code.
+
+The project files are for Visual Studio .NET 2003 and 2005; no .NET extensions
+are used except in VTFEdit.  Visual Studio 6.0 project files have also been
+included, but nvDXTLib does not come with the correct .lib files to link with.
+nvDXTLib is required for VTF creation and can be downloaded from:
 
 http://developer.nvidia.com/object/dds_utilities_legacy.html
 
-## VTFCmd Usage
+=============
+VTFCmd Usage:
+=============
 
-```
 Correct vtfcmd usage:
  -file <path>             (Input file path.)
  -folder <path>           (Input directory search string.)
@@ -75,9 +111,18 @@ vtfcmd.exe -file "C:\texture1.bmp" -file "C:\texture2.bmp" -format "dxt1"
 vtfcmd.exe -file "C:\texture.bmp" -format "bgr888" -normal -postfix "normal_"
 vtfcmd.exe -folder "C:\input\*.tga" -output "C:\output" -recurse -pause
 vtfcmd.exe -folder "C:\output\*.vtf" -output "C:\input" -exportformat "jpg"
-```
 
-## Library Changelog
+==============
+Documentation:
+==============
+
+Documentation on VTFLib can be found here:
+
+http://www.wunderboy.org/3d_games/utils/vtflib_docs.php
+
+==================
+Library Changelog:
+==================
 
   v1.3.2
   - Improved support for version 7.5 of the VTF format.
@@ -153,7 +198,9 @@ vtfcmd.exe -folder "C:\output\*.vtf" -output "C:\input" -exportformat "jpg"
   v1.0.0
   - Original build.
 
-## VTFCmd Changelog
+=================
+VTFCmd Changelog:
+=================
 
   v1.1.1
   - Improved support for version 7.5 of the VTF format.
@@ -202,7 +249,9 @@ vtfcmd.exe -folder "C:\output\*.vtf" -output "C:\input" -exportformat "jpg"
   v1.0.0
   - Original build.
 
-## VTFEdit Changelog:
+==================
+VTFEdit Changelog:
+==================
 
   v1.3.3
   - Updated to HLLib v2.4.2.
@@ -297,7 +346,8 @@ vtfcmd.exe -folder "C:\output\*.vtf" -output "C:\input" -exportformat "jpg"
   v1.0.0
   - Original build.
 
-
-## Program Copyright-Permissions
+==============================
+Program Copyright-Permissions:
+==============================
 
 See the lgpl.txt (VTFLib) and gpl.txt (VTFCmd & VTFEdit) files contained in the distribution.
