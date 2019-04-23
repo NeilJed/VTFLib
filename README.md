@@ -1,4 +1,4 @@
-# VTFLib: Valve VTF and VMT image format programming library.
+# VTFLib - A Valve VTF and VMT image format programming library.
 
 VTFLib is a LGPL open source programming library that provides a C and C++ API that, with a few simple functions, can open and save .vtf and .vmt files, providing access to all known features. The library functions independent of Steam, allowing third party applications to use the library without Steam present or runningi on the target system.
 
@@ -9,7 +9,7 @@ VTFLib includes two GPL example applications, VTFCmd and VTFEdit. VTFCmd is a C 
 * **Title**: VTFLib
 * **Written In**: C/C++
 * **Date**: July 25th, 2011
-* **Authors**: [https://github.com/NeilJed](Neil Jedrzejewski) & [http://nemesis.thewavelength.net/](Ryan Gregg)
+* **Authors**: [Neil 'Jed' Jedrzejewski](https://github.com/NeilJed) & [Ryan Gregg](http://nemesis.thewavelength.net/)
 
 ## Project Structure
 
