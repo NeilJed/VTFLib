@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\VTFLib\Error.cpp" />
+    <ClCompile Include="..\..\..\VTFLib\FileReader.cpp" />
+    <ClCompile Include="..\..\..\VTFLib\FileWriter.cpp" />
+    <ClCompile Include="..\..\..\VTFLib\Float16.cpp" />
+    <ClCompile Include="..\..\..\VTFLib\MemoryReader.cpp" />
+    <ClCompile Include="..\..\..\VTFLib\MemoryWriter.cpp" />
+    <ClCompile Include="..\..\..\VTFLib\Proc.cpp" />
+    <ClCompile Include="..\..\..\VTFLib\ProcReader.cpp" />
+    <ClCompile Include="..\..\..\VTFLib\ProcWriter.cpp" />
+    <ClCompile Include="..\..\..\VTFLib\VMTFile.cpp" />
+    <ClCompile Include="..\..\..\VTFLib\VMTGroupNode.cpp" />
+    <ClCompile Include="..\..\..\VTFLib\VMTIntegerNode.cpp" />
+    <ClCompile Include="..\..\..\VTFLib\VMTNode.cpp" />
+    <ClCompile Include="..\..\..\VTFLib\VMTSingleNode.cpp" />
+    <ClCompile Include="..\..\..\VTFLib\VMTStringNode.cpp" />
+    <ClCompile Include="..\..\..\VTFLib\VMTValueNode.cpp" />
+    <ClCompile Include="..\..\..\VTFLib\VMTWrapper.cpp" />
+    <ClCompile Include="..\..\..\VTFLib\VTFFile.cpp" />
+    <ClCompile Include="..\..\..\VTFLib\VTFLib.cpp" />
+    <ClCompile Include="..\..\..\VTFLib\VTFMathlib.cpp" />
+    <ClCompile Include="..\..\..\VTFLib\VTFWrapper.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\VTFLib\Error.h" />
+    <ClInclude Include="..\..\..\VTFLib\FileReader.h" />
+    <ClInclude Include="..\..\..\VTFLib\FileWriter.h" />
+    <ClInclude Include="..\..\..\VTFLib\Float16.h" />
+    <ClInclude Include="..\..\..\VTFLib\MemoryReader.h" />
+    <ClInclude Include="..\..\..\VTFLib\MemoryWriter.h" />
+    <ClInclude Include="..\..\..\VTFLib\Proc.h" />
+    <ClInclude Include="..\..\..\VTFLib\ProcReader.h" />
+    <ClInclude Include="..\..\..\VTFLib\ProcWriter.h" />
+    <ClInclude Include="..\..\..\VTFLib\Reader.h" />
+    <ClInclude Include="..\..\..\VTFLib\Readers.h" />
+    <ClInclude Include="..\..\..\VTFLib\resource.h" />
+    <ClInclude Include="..\..\..\VTFLib\stdafx.h" />
+    <ClInclude Include="..\..\..\VTFLib\VMTFile.h" />
+    <ClInclude Include="..\..\..\VTFLib\VMTGroupNode.h" />
+    <ClInclude Include="..\..\..\VTFLib\VMTIntegerNode.h" />
+    <ClInclude Include="..\..\..\VTFLib\VMTNode.h" />
+    <ClInclude Include="..\..\..\VTFLib\VMTNodes.h" />
+    <ClInclude Include="..\..\..\VTFLib\VMTSingleNode.h" />
+    <ClInclude Include="..\..\..\VTFLib\VMTStringNode.h" />
+    <ClInclude Include="..\..\..\VTFLib\VMTValueNode.h" />
+    <ClInclude Include="..\..\..\VTFLib\VMTWrapper.h" />
+    <ClInclude Include="..\..\..\VTFLib\VTFDXTn.h" />
+    <ClInclude Include="..\..\..\VTFLib\VTFFile.h" />
+    <ClInclude Include="..\..\..\VTFLib\VTFFormat.h" />
+    <ClInclude Include="..\..\..\VTFLib\VTFLib.h" />
+    <ClInclude Include="..\..\..\VTFLib\VTFMathlib.h" />
+    <ClInclude Include="..\..\..\VTFLib\VTFWrapper.h" />
+    <ClInclude Include="..\..\..\VTFLib\Writer.h" />
+    <ClInclude Include="..\..\..\VTFLib\Writers.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\VTFLib\Resource.aps" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\..\..\VTFLib\Resource.rc" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{85ECFC39-0719-47B3-A90E-961E0F1750CA}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(Platform)\$(ConfigurationName)</OutDir>
+    <IntDir>$(Platform)\$(ConfigurationName)</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;VTFLIB_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;VTFLIB_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;VTFLIB_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;VTFLIB_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
