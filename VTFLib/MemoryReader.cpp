@@ -18,6 +18,7 @@ using namespace VTFLib::IO::Readers;
 CMemoryReader::CMemoryReader(const vlVoid *vData, vlUInt uiBufferSize)
 {
 	this->bOpened = vlFalse;
+	this->uiPointer = 0;
 
 	this->vData = vData;
 	this->uiBufferSize = uiBufferSize;

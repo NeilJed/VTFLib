@@ -50,7 +50,7 @@ void VecReflect(Vector *axis, Vector *v, Vector *r)
 vlInt Intersect(Vector *v)
 {
 	vlInt f;
-	vlSingle x, y, z;
+	vlDouble x, y, z;
   
 	x = fabs(v->x); y = fabs(v->y); z = fabs(v->z);
 	
