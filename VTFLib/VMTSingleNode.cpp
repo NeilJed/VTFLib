@@ -18,6 +18,7 @@ CVMTSingleNode::CVMTSingleNode(const vlChar *cName) : CVMTValueNode(cName)
 	this->fValue = (vlFloat)0.0;
 }
 
+#pragma warning( disable : 26495 )
 CVMTSingleNode::CVMTSingleNode(const vlChar *cName, const vlChar *cValue) : CVMTValueNode(cName)
 {
 	this->SetValue(cValue);

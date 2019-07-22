@@ -51,7 +51,7 @@ vlVoid CError::Set(const vlChar *cErrorMessage, vlBool bSystemError)
 	vlChar cBuffer[2048];
 	if(bSystemError)
 	{
-		LPVOID lpMessage;
+		LPSTR lpMessage = NULL;
 		vlUInt uiLastError = GetLastError(); 
 
 		if(FormatMessage(FORMAT_MESSAGE_ALLOCATE_BUFFER | FORMAT_MESSAGE_FROM_SYSTEM, NULL, uiLastError, MAKELANGID(LANG_NEUTRAL, SUBLANG_DEFAULT), (LPSTR)&lpMessage, 0, NULL))

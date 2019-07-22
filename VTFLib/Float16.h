@@ -33,10 +33,7 @@ private:
 	} Float16;
 
 public:
-	inline SFloat16()
-	{
-
-	}
+	inline SFloat16();
 
 	inline SFloat16(vlUShort usFloat)
 	{

@@ -18,6 +18,7 @@ CVMTIntegerNode::CVMTIntegerNode(const vlChar *cName) : CVMTValueNode(cName)
 	this->iValue = 0;
 }
 
+#pragma warning( disable : 26495 )
 CVMTIntegerNode::CVMTIntegerNode(const vlChar *cName, const vlChar *cValue) : CVMTValueNode(cName)
 {
 	this->SetValue(cValue);

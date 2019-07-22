@@ -38,7 +38,7 @@ extern "C" {
 #pragma pack(1)
 typedef struct tagSVTFImageFormatInfo
 {
-	vlChar *lpName;					//!< Enumeration text equivalent.
+	const vlChar *lpName;			//!< Enumeration text equivalent.
 	vlUInt	uiBitsPerPixel;			//!< Format bits per pixel.
 	vlUInt	uiBytesPerPixel;		//!< Format bytes per pixel.
 	vlUInt	uiRedBitsPerPixel;		//!< Format red bits per pixel.  0 for N/A.
