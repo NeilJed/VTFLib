@@ -955,6 +955,17 @@ vlBool CVTFFile::Create(vlUInt uiWidth, vlUInt uiHeight, vlUInt uiFrames, vlUInt
 		this->SetStartFrame(VTFCreateOptions.uiStartFrame);
 		this->SetBumpmapScale(VTFCreateOptions.sBumpScale);
 
+		if(lpNewImageDataRGBA8888 != 0)
+		{
+			for(vlUInt i = 0; i < uiCount; i++)
+			{
+				delete []lpNewImageDataRGBA8888[i];
+			}
+			delete []lpNewImageDataRGBA8888;
+		}
+
+		this->Destroy();
+
 		return vlTrue;
 	}
 	catch(...)
