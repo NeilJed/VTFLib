@@ -1,15 +1,27 @@
+> **Warning**
+>
+> VTFLib project is **no-longer being actively developed** by the original authors and as-such:
+> * The current code is unsupported and used at your own risk.
+> * The original code was developed from 2005-2011 - it likely doesn't run out of the box on modern version of Windows.
+> * There may be some basic updates or maintenance but this is strictly limited to tinkering.
+> * Pull Requests are welcome so long as they bring some value.
+> * Feel free to open issues, however its unlikely much will be fixed.
+
 # VTFLib - A Valve VTF and VMT image format programming library.
 
 VTFLib is a LGPL open source programming library that provides a C and C++ API that, with a few simple functions, can open and save .vtf and .vmt files, providing access to all known features. The library functions independent of Steam, allowing third party applications to use the library without Steam present or runningi on the target system.
 
 VTFLib includes two GPL example applications, VTFCmd and VTFEdit. VTFCmd is a C command line frontend for VTFLib that can create .vtf and .vmt files from various source formats. It is similar in functionality to Valve's vtex Source SDK utility, but offers a lot more control. VTFEdit is a C++ .NET graphical frontend for VTFLib with viewing and creation capabilities. Both VTFCmd and VTFEdit support several source image formats, including, but not limited to .bmp, .dds, .gif, .jpg, .png and .tga.
 
-## Library/Author Information
+## A note from the authors
 
-* **Title**: VTFLib
-* **Written In**: C/C++
-* **Date**: July 25th, 2011
-* **Authors**: [Neil 'Jed' Jedrzejewski](https://github.com/NeilJed) & [Ryan Gregg](http://nemesis.thewavelength.net/)
+Between 2005 and 2011 myself and Ryan Gregg developed a number of tools and libraries to help modders and developers create content for Valve's Source game engine - VTFLib was one of them. However, as of time of writing, that was 12 years ago and we've moved onto other things. I'm shocked (and actually pleased) that people are still using VTFLib and VTFEdit despite how old it is.
+
+Though we're not actively developing it, your welcome to make forks and develop your own version (maybe fix a few things) as per the LGPL license. I may *tinker* with the code from time to time though this is for my own curiosity and amusement and not any for of official work.
+
+Thanks to everyone who supported us over the years!
+
+*[Neil 'Jed' Jedrzejewski](https://github.com/NeilJed) & [Ryan Gregg](http://nemesis.thewavelength.net/)*
 
 ## Project Structure
 
