@@ -1040,22 +1040,26 @@ vlBool CVTFFile::IsLoaded() const
 
 vlBool CVTFFile::Load(const vlChar *cFileName, vlBool bHeaderOnly)
 {
-	return this->Load(&IO::Readers::CFileReader(cFileName), bHeaderOnly);
+	auto r = IO::Readers::CFileReader(cFileName);
+	return this->Load(&r, bHeaderOnly);
 }
 
 vlBool CVTFFile::Load(const vlVoid *lpData, vlUInt uiBufferSize, vlBool bHeaderOnly)
 {
-	return this->Load(&IO::Readers::CMemoryReader(lpData, uiBufferSize), bHeaderOnly);
+	auto r = IO::Readers::CMemoryReader(lpData, uiBufferSize);
+	return this->Load(&r, bHeaderOnly);
 }
 
 vlBool CVTFFile::Load(vlVoid *pUserData, vlBool bHeaderOnly)
 {
-	return this->Load(&IO::Readers::CProcReader(pUserData), bHeaderOnly);
+	auto r = IO::Readers::CProcReader(pUserData);
+	return this->Load(&r, bHeaderOnly);
 }
 
 vlBool CVTFFile::Save(const vlChar *cFileName) const
 {
-	return this->Save(&IO::Writers::CFileWriter(cFileName));
+	auto w = IO::Writers::CFileWriter(cFileName);
+	return this->Save(&w);
 }
 
 vlBool CVTFFile::Save(vlVoid *lpData, vlUInt uiBufferSize, vlUInt &uiSize) const
@@ -1073,7 +1077,8 @@ vlBool CVTFFile::Save(vlVoid *lpData, vlUInt uiBufferSize, vlUInt &uiSize) const
 
 vlBool CVTFFile::Save(vlVoid *pUserData) const
 {
-	return this->Save(&IO::Writers::CProcWriter(pUserData));
+	auto w = IO::Writers::CProcWriter(pUserData);
+	return this->Save(&w);
 }
 
 // -----------------------------------------------------------------------------------
@@ -2655,7 +2660,7 @@ vlBool CVTFFile::GenerateSphereMap()
 				//get point on sphere
 				p.x = s;
 				p.y = t;
-				p.z = sqrt(0.25f - temp);
+				p.z = sqrtf(0.25f - temp);
 				VecScale(&p, 2.0f);
 
 				//ray from infinity (eyepoint) to surface
@@ -3563,9 +3568,9 @@ vlVoid FromFP16(vlUInt16& R, vlUInt16& G, vlUInt16& B, vlUInt16& A)
 
 	sTemp = sTemp / sY;
 
-	R = (vlUInt16)ClampFP16(pow((sY + 1.403f * sV) * sTemp + sFP16HDRShift, sFP16HDRGamma) * 65535.0f);
-	G = (vlUInt16)ClampFP16(pow((sY - 0.344f * sU - 0.714f * sV) * sTemp + sFP16HDRShift, sFP16HDRGamma) * 65535.0f);
-	B = (vlUInt16)ClampFP16(pow((sY + 1.770f * sU) * sTemp + sFP16HDRShift, sFP16HDRGamma) * 65535.0f);
+	R = (vlUInt16)ClampFP16(powf((sY + 1.403f * sV) * sTemp + sFP16HDRShift, sFP16HDRGamma) * 65535.0f);
+	G = (vlUInt16)ClampFP16(powf((sY - 0.344f * sU - 0.714f * sV) * sTemp + sFP16HDRShift, sFP16HDRGamma) * 65535.0f);
+	B = (vlUInt16)ClampFP16(powf((sY + 1.770f * sU) * sTemp + sFP16HDRShift, sFP16HDRGamma) * 65535.0f);
 }
 
 typedef struct tagSVTFImageConvertInfo
@@ -3794,10 +3799,10 @@ vlBool ConvertTemplated(vlByte *lpSource, vlByte *lpDest, vlUInt uiWidth, vlUInt
 
 			vlSingle sLuminance = (vlSingle)p[0] * 0.299f + (vlSingle)p[1] * 0.587f + (vlSingle)p[2] * 0.114f;
 
-			sHDRLogAverageLuminance += log(0.0000000001f + sLuminance);
+			sHDRLogAverageLuminance += logf(0.0000000001f + sLuminance);
 		}
 
-		sHDRLogAverageLuminance = exp(sHDRLogAverageLuminance / (vlSingle)(uiWidth * uiHeight));
+		sHDRLogAverageLuminance = expf(sHDRLogAverageLuminance / (vlSingle)(uiWidth * uiHeight));
 	}
 
 	vlByte *lpSourceEnd = lpSource + (uiWidth * uiHeight * SourceInfo.uiBytesPerPixel);
@@ -4189,7 +4194,7 @@ vlVoid CVTFFile::ComputeImageReflectivity(vlByte *lpImageDataRGBA8888, vlUInt ui
 
 	for(vlUInt i = 0; i < 256; i++)
 	{
-		sTable[i] = pow((vlSingle)i / 255.0f, 2.2f);
+		sTable[i] = powf((vlSingle)i / 255.0f, 2.2f);
 	}
 
 	//

@@ -27,7 +27,7 @@
 // Defines for data alignment
 //---------------------------
 #define CACHE_LINE  16								//!< Alignment size.
-#define CACHE_ALIGN __declspec(align(CACHE_LINE))	//!< Storage-class information alignment.
+#define CACHE_ALIGN alignas(CACHE_LINE)				//!< Storage-class information alignment.
 
 // Macros
 //-------
